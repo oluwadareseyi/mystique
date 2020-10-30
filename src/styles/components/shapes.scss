@@ -9,7 +9,7 @@
         display: flex;
         min-height: 40vh;
         place-items: center;
-        grid-gap: 80px;
+        // grid-gap: 80px;
         flex-wrap: wrap;
     }
 }
@@ -21,6 +21,7 @@
     will-change: clip-path, width, height, border-radius, transform;
     background: #fd6808;
     position: relative;
+    margin-right: 80px;
 }
 
 .select {
