@@ -14,6 +14,9 @@ const shapeName = [
   "hexagon",
   "octagon",
   "decagon",
+  "frame",
+  "right arrow",
+  "left arrow",
 ];
 
 const initialState = {
