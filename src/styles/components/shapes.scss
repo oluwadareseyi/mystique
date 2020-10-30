@@ -1,0 +1,168 @@
+.shapes-con {
+    padding: 30px 70px;
+
+    @include media("<=427px") {
+        padding: 30px;
+    }
+
+    .shape-grid {
+        display: flex;
+        min-height: 40vh;
+        place-items: center;
+        grid-gap: 80px;
+        flex-wrap: wrap;
+    }
+}
+
+.shape {
+    // width: 100px;
+    // height: 100px;
+    margin-top: 50px;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0);
+    transition: clip-path .8s, width .8s, height .8s, border-radius .8s, transform .8s;
+    will-change: clip-path, width, height, border-radius, transform;
+    background: #fd6808;
+    position: relative;
+}
+
+.select {
+    clip-path: polygon(0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0);
+}
+
+.triangle {
+    width: 100px;
+    height: 100px;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%);
+}
+
+.trapezium {
+    clip-path: polygon(20% 0%, 85% 0%, 100% 100%, 0% 100%, 15% 0, 0 0, 0 0, 0 0, 0 0, 0 0);
+}
+
+.parallelogram {
+    clip-path: polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%, 20% 0, 0 0, 0 0, 0 0, 0 0, 0 0);
+}
+
+.circle {
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0);
+    border-radius: 50%;
+}
+
+.rhombus {
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0);
+    transform: rotate(45deg);
+}
+
+.pentagon {
+    clip-path: polygon(50% 0%, 100% 35%, 100% 35%, 100% 35%, 85% 100%, 85% 100%, 19% 100%, 19% 100%, 0% 35%, 0 35%);
+}
+
+.star {
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+
+.hexagon {
+    clip-path: polygon(75% 0, 100% 51%, 75% 100%, 75% 100%, 75% 100%, 25% 100%, 0 0, 25% 100%, 0 50%, 25% 0);
+}
+
+.octagon {
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0 0, 0 0, 0% 30%);
+}
+
+.decagon {
+    clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
+}
+
+.form-con {
+    padding: 100px 30px;
+
+    .title {
+        text-align: center;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+form {
+    width: 100%;
+
+    label,
+    button {
+        display: block;
+        margin: 5px 0;
+    }
+
+    input[type="number"] {
+        border-radius: 5px;
+        border: 2px solid $black;
+        background: $white;
+        outline: none;
+        text-align: left;
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+        color: #474747;
+        padding: 15px 0;
+        text-indent: 10px;
+        font-size: 13px;
+        width: 100%;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+
+
+        &::placeholder {
+            color: #989898;
+            font-weight: 500;
+        }
+    }
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+
+        .row-item {
+            width: 45%;
+        }
+    }
+
+
+    select {
+        border: 2px solid $black;
+        border-radius: 5px;
+        background: $white;
+        outline: none;
+        text-align: left;
+        font-family: 'Inter', sans-serif;
+        font-size: 14.5px;
+        font-weight: 500;
+        color: #484747;
+        text-transform: uppercase;
+        padding: 12px 0;
+        width: 105%;
+        box-sizing: border-box;
+    }
+
+    label {
+        text-transform: uppercase;
+        margin-top: 20px;
+        display: block;
+        text-transform: uppercase;
+        color: #4E4E4E;
+        font-size: 12.5px;
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+
+    button {
+        background: $black;
+        color: $white;
+        padding: 10px 20px;
+        border: 0;
+        outline: 0;
+        border-radius: 5px;
+        margin-top: 30px;
+    }
+}
